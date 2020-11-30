@@ -1,0 +1,23 @@
+.login-wrapper{
+    margin: 0 auto;
+    width: 300px;
+    padding: 10px;
+
+}
+.login-wrapper div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.submit{
+    width: 100%;
+    padding: 5px;
+}
+
+.sec-href{
+    justify-content: center !important;
+}
+
+.submit, .sec-href{
+    text-transform: uppercase;
+}

@@ -1,0 +1,9 @@
+.list-wrapper{
+    margin: 0 auto;
+}
+.list-wrapper label, .list-wrapper form{
+    padding: 5px 5px 5px 0px;
+}
+.list-competency{
+    width: 90px;
+}
