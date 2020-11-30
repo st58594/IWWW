@@ -1,0 +1,38 @@
+section h2{
+    text-align: center;
+}
+form{
+    width: 350px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.row label{
+    width: 200px;
+
+}
+input, textarea{
+    box-sizing: content-box;
+    width: 100%;
+    padding: 3px;
+    flex-wrap: wrap;
+}
+
+.btn{
+    border-radius: 3px;
+}
+@media (max-width: 400px) {
+    form{
+        width: auto;
+    }
+    .row label{
+        display: none;
+    }
+#row{
+    display: block;
+}
+
+}
