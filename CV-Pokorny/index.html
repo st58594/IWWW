@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <title>Cv-Pokorny</title>
+    <style media="all" type="text/css">
+        body{
+            font-family: "Roboto Thin";
+            margin: 0;
+            padding: 0;
+        }
+        a{
+           font-weight: bold;
+            color: #0B315C;
+            text-decoration: none;
+        }
+
+        .land-page{
+            background-image: url("landpage.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 55Vh;
+            padding-left: 40Vh;
+            padding-top: 15Vh;
+        }
+        .welcome{
+            width: 45%;
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 25px;
+        }
+        h1,h2, .p-welcome{
+            text-transform: uppercase;
+            margin: 5px;
+        }
+        h1{
+            font-weight: bolder;
+            color: #0B315C;
+            font-size: 56px;
+            margin: 0;
+        }
+        h2{
+            font-size: 28px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 16px;
+        }
+
+        .p-welcome {
+            font-size: 18px;
+        }
+        .about-me{
+            height: 25vh;
+            background-color: #125199;
+            display: flex;
+            overflow: hidden;
+            color: white;
+
+        }
+        .about-me .left {
+            width: 30%;
+            text-align: right;
+            padding: 35px;
+        }
+
+        .about-me .right{
+            width: 70%;
+            padding: 35px;
+        }
+
+        .about-me .right p{
+            margin: 0;
+        }
+
+        .about-me .left h2, .about-me .left h3{
+            margin: 0;
+
+        }
+        footer{
+            height: 5Vh;
+            background-color: dimgrey;
+            text-align: center;
+        }
+        footer p {
+            padding: 1vh;
+            margin: 0;
+        }
+        @media only screen and (max-width: 1255px) {
+            .land-page{
+                background-image: none;
+                padding: 0;
+                height: auto;
+            }
+            .welcome{
+                width: auto;
+            }
+            .about-me{
+                height: auto;
+            }
+            footer{
+                height: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="land-page">
+        <div class="welcome">
+            <p class="p-welcome">Čau, jmenuji se</p>
+            <h1>Jakub Pokorný</h1>
+            <h2>a jsem programátor</h2>
+            <p>took a galley of type and scrambled it to make a type specimen book. g, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <a href="#downloadCV">Stáhnout CV</a>
+        </div>
+    </div>
+    <div class="about-me">
+        <div class="left">
+            <h2>o mně</h2>
+            <h3>Jakub Pokorný</h3>
+        </div>
+        <div class="right">
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        </div>
+    </div>
+    <footer>
+        <p>CopyRight 2020 Pokorný</p>
+    </footer>
+</body>
+</html>
