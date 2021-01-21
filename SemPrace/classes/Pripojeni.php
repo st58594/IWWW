@@ -4,7 +4,7 @@ define("DB_NAME", "db_semiwww");
 define("DB_USER", "root");
 define("DB_PASSWORD", "");
 
-class Connection
+class Pripojeni
 {
     static private $instance = NULL;
 
