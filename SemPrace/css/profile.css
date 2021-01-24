@@ -1,0 +1,15 @@
+
+.justify-center {
+    justify-content: center !important;
+}
+
+.profile-image img {
+    display: inline-block !important;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+input[type="file"], input[type="submit"]{
+    display: none;
+}

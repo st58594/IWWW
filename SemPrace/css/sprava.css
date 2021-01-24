@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+.content-container {
+    /*flex-grow: 1;*/
+}
+
+.aside-container{
+    border-right: 1px solid #343a40;
+}
+
+/*SIDE NAV*/
+.side-nav, .filtry-container{
+    display: grid;
+    padding: 15px;
+}
+.side-nav a, .filtr{
+    color: black;
+    background-color: #dddddd;
+    margin-bottom: 5px;
+}
+
+.side-nav a:hover , .filtr:hover{
+    background-color: #343a40;
+    color: white;
+    transition: .5s;
+}
+
+.filtr{
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+}
+.filtr input{
+    margin-right:7px;
+    margin-left: 0;
+}
+.filtry-container form {
+    margin: 0;
+}
+.filtry-container h3, .filtry-container p {
+    margin: 5px 0;
+}
+
+/*TABLE*/
+form {
+    /*display: table;*/
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+label {
+    margin: 5px;
+}
+
+.submit, select, input {
+    width: 100%;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #343a40;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #343a40;
+    color: white;
+}
+
+td input, td select, td textarea, .submit-row {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+td input, td select, .submit-row {
+    padding: 10px;
+}
+
+.submit-row, .submit-row a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.submit-row:hover, .submit-row a:hover {
+    color: #3e6388;
+}
+
+.file-upload{
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+}
+.thumb{
+        width: auto;
+    height: 100px;
+
+}
+
+input[type='checkbox']{
+    width: auto;
+}
