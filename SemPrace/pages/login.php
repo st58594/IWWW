@@ -1,11 +1,15 @@
 <?php
 if (isset($_SESSION["Umelec"])) {
     unset($_SESSION["Umelec"]);
-    header("Location: ./index.php?page=login");
+    ?>
+    <script>
+        window.location.reload();
+    </script>
+<?php
 }
 if (!empty($_POST)) {
     try {
-        $_SESSION["Umelec"] = Umelec::getUmelec($_POST["login"], $_POST["password"]);
+        $_SESSION["Umelec"] = Umelec::loginUmelec($_POST["login"], $_POST["password"]);
         header("Location: ./index.php");
     } catch (PDOException $exception) {
     }
@@ -34,7 +38,10 @@ if (!empty($_POST)) {
             </label>
         </div>
         <div>
-            <input value="Přihlásit se" class="submit" type="submit">
+            <label for="sign-in" class="submit">
+                <input id="sign-in" value="Přihlásit se" class="submit" type="submit">
+                <i class="fa fa-sign-in"></i> Přihlásit se
+            </label>
         </div>
         <div class="sec-href">
             <a href="./index.php?page=registration">Registrovat se</a>

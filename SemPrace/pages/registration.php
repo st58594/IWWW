@@ -11,7 +11,7 @@
         }
     }
     ?>
-    <form class="registration-form" method="post" action="index.php?page=registration">
+    <form class="registration-form" method="post" action="./index.php?page=registration">
         <div>
             <label class="label">Login:</label>
             <label>
@@ -45,11 +45,14 @@
             <div>
                 <label class="label">Telefonní číslo:</label>
                 <label>
-                    <input type="text" pattern="[0-9]{13}" title="telefonni cislo bez mezer" placeholder="+420123456789" name="mobil">
+                    <input type="text" pattern="[0-9]{9}" title="telefonni cislo bez mezer" placeholder="123456789" name="mobil">
                 </label>
             </div>
             <div>
-                <input value="Registrovat se" class="submit" type="submit">
+                <label for="sign-up" class="submit">
+                    <input id="sign-up" value="Registrovat se" class="submit" type="submit">
+                    <i class="fa fa-plus-square"></i> Registrovat se
+                </label>
             </div>
     </form>
     <div class="sec-href">
