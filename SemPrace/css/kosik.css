@@ -1,0 +1,113 @@
+
+.main-container{
+    width: fit-content;
+    min-width: 65%;
+    display: block;
+    margin: 0 auto;
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 65%;
+}
+
+.product-wrapper {
+    display: flex;
+    border-bottom: 1px solid #343a40;
+    margin: 5px;
+    padding: 5px;
+    justify-content: space-between;
+}
+.product-wrapper div{
+    display: flex;
+}
+.product-name, .product-price, .product-amount{
+    padding: 0 15px;
+}
+.delete{
+    margin: 0 15px;
+}
+.product-wrapper .left, .product-wrapper .right, .mnozstvi{
+    align-items: center;
+}
+
+.continue{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-img{
+    width: 225px;
+}
+
+.product-wrapper .right{
+
+
+}
+
+.product-wrapper div{
+
+}
+.mnozstvi{
+    display: flex;
+}
+.mnozstvi div{
+    display: block;
+}
+
+.product-btn a {
+    display: block;
+    text-decoration: none;
+    /*text-transform: uppercase;*/
+    color: #343a40;
+}
+
+.product-btn a:hover {
+    color: #dddddd;
+    transition: .5s;
+}
+
+#finish-order{
+    font-size: 1em;
+}
+#finish-order a{
+    padding: 0 25px;
+}
+
+.doprava_a_platba{
+    display: flex;
+}
+
+.doprava, .platba, .dodaci_udaje{
+    flex-direction: column;
+    flex-grow: 1;
+}
+.product-wrapper form{
+    display: contents;
+}
+
+form label{
+    min-width: 100px;
+    padding: 5px 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .product-wrapper{
+        flex-direction: column;
+    }
+    .right{
+        padding: 10px;
+    }
+    .product-img{
+        width: auto;
+    }
+    .continue{
+        flex-direction: row;
+    }
+    .left, .right, .continue{
+        justify-content: center;
+    }
+
+}
