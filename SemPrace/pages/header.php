@@ -1,18 +1,11 @@
-<header class="main-header">
+<header class="main-header" id="main-header">
     <nav id="left">
         <a href="./index.php">Eshop</a>
-        <!--        --><?php
-        //        if (isset($_SESSION["Umelec"])){
-        //            echo "<a href='./index.php'>předměty</a>";
-        //            if ($_SESSION["Umelec"]["OPRAVNENI"] <= 1){
-        //                echo "<a href='./sprava.php'>Správa</a>";
-        //            }
-        //            if ($_SESSION["Umelec"]["OPRAVNENI"] <= 2){
-        //                echo "<a href='./index.php?page=hodnoceni'>Hodnoceni</a>";
-        //            }
-        //        }
-        //        ?>
-
+        <?php
+        if (!empty($_SESSION["Umelec"])) {
+            echo '<a href="./sprava.php?page=objednavky">Objednávky</a>';
+        }
+        ?>
     </nav>
     <nav id="right">
         <?php
@@ -25,22 +18,37 @@
             } else {
                 echo '<img class="thum-avatar" src="data:image/jpeg;base64,' . base64_encode($_SESSION["Umelec"]["avatar"]) . '"/>';
             }
-            echo " ".$_SESSION["Umelec"]["jmeno"]." ".$_SESSION["Umelec"]["prijmeni"] ."</a>";
-            ?>
-        <!--            <div class="dropdown" >-->
-        <!--            <button class="dropbtn">-->
-        <?php //echo $_SESSION["user"]["JMENO"]. " " . $_SESSION["user"]["PRIJMENI"];?><!--</button>-->
-        <!--            <div class="dropdown-content">-->
-        <!--                <a href="profile.php"><i class='fa fa-id-card' aria-hidden='true'></i> Profil </a>-->
-        <!--                <a href="zpravy.php"><i class='fa fa-envelope' aria-hidden='true'></i> Zprávy </a>-->
-        <!--                <a href="./logout.php"><i class='fa fa-sign-out' aria-hidden='true'></i> Odhlásit se </a>-->
-        <!--            </div>-->
-        <!--            </div >-->
-        <!--            </div>-->
-        <?php
-        echo "<a href='./index.php?page=login'><i class='fa fa-sign-out' aria-hidden='true'></i></a>";
+            echo " <span class='umelec'>" . $_SESSION["Umelec"]["jmeno"] . " " . $_SESSION["Umelec"]["prijmeni"] . "</span></a>";
+
+            if (isset($_SESSION["emulator"]) && !empty($_SESSION["emulator"])){
+                echo "<a href='./sprava.php?action=unset'><i class='fa fa-eye-slash' aria-hidden='true'></i></a>";
+            }
+
+            echo "<a href='./index.php?page=login'><i class='fa fa-sign-out' aria-hidden='true'></i></a>";
+
+
         }
+
         ?>
-        <a href="#"><i class="fa fa-shopping-basket"></i></a>
+        <a href="./kosik.php?page=prehled"><i class="fa fa-shopping-basket"></i></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
 </header>
+<script>
+    function myFunction() {
+        var x = document.getElementById("main-header");
+        var r = document.getElementById("right");
+        var l = document.getElementById("left")
+        if (x.className === "main-header") {
+            x.className += " res";
+            r.className += "responsive"
+            l.className += "responsive"
+        } else {
+            x.className = "main-header";
+            r.className = ""
+            l.className = ""
+        }
+    }
+</script>

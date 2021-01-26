@@ -25,6 +25,44 @@ body{
     padding: 5px 15px;
 }
 
+.aside-container{
+    border-right: 1px solid #343a40;
+}
+
+/*SIDE NAV*/
+.side-nav, .filtry-container{
+    display: grid;
+    padding: 15px;
+}
+.side-nav a, .filtr{
+    color: black;
+    background-color: #dddddd;
+    margin-bottom: 5px;
+}
+
+.side-nav a:hover , .filtr:hover{
+    background-color: #343a40;
+    color: white;
+    transition: .5s;
+}
+
+.filtr{
+    box-sizing: border-box;
+    display: block;
+    white-space: nowrap;
+    margin: 0;
+}
+.filtr input{
+    margin-right:7px;
+    margin-left: 0;
+}
+.filtry-container form {
+    margin: 0;
+}
+.filtry-container h3, .filtry-container p {
+    margin: 5px 0;
+}
+
 nav a, .filtr{
     padding: 5px 15px;
     text-decoration: none;
@@ -78,4 +116,10 @@ transform: rotate(90deg);
 
 .submit:hover{
     color: white;
+}
+
+.thumb{
+    width: auto;
+    height: 100px;
+
 }
