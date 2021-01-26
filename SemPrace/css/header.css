@@ -57,13 +57,13 @@ nav > a:hover::before {
     height: 35px;
 }
 
-.icon{
-    display: none ;
+.icon {
+    display: none;
 }
 
 @media screen and (max-width: 700px) {
 
-    .icon{
+    .icon {
         display: inline-block;
     }
 
@@ -71,9 +71,10 @@ nav > a:hover::before {
         display: none;
     }
 
-    #right a{
+    #right a {
         padding: 5px;
     }
+
     #right {
         width: 100%;
         text-align: right;
@@ -88,7 +89,7 @@ nav > a:hover::before {
 }
 
 @media screen and (max-width: 700px) {
-    #right a{
+    #right a {
         padding: 5px 2px;
     }
 }

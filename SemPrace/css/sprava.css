@@ -10,7 +10,6 @@ body {
 }
 
 
-
 /*TABLE*/
 form {
     /*display: table;*/
@@ -25,7 +24,8 @@ form div {
 label {
     margin: 5px;
 }
-.objednavka td label{
+
+.objednavka td label {
     text-align: left;
     display: block;
 }
@@ -38,9 +38,11 @@ label {
 table {
     border-collapse: collapse;
 }
-th{
+
+th {
     padding: 5px;
 }
+
 td, th {
     border: 1px solid #343a40;
     text-align: center;
@@ -73,7 +75,7 @@ td input, td select, .submit-row {
     padding: 10px;
 }
 
-.objednavka td input, .objednavka td select{
+.objednavka td input, .objednavka td select {
     padding: 0 !important;
 }
 
@@ -87,24 +89,23 @@ td input, td select, .submit-row {
     color: #3e6388;
 }
 
-.file-upload{
+.file-upload {
     cursor: pointer;
     margin: 0;
     padding: 10px;
 }
 
-input[type='checkbox']{
+input[type='checkbox'] {
     width: auto;
 }
 
 @media only screen and (max-width: 1200px) {
-    .main-container{
+    .main-container {
         flex-direction: column;
     }
 }
 
-@media
-only screen and (max-width: 760px),
+@media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px) {
 
     /* Force table to not be like tables anymore */
@@ -227,9 +228,11 @@ only screen and (max-width: 760px),
     .kategorie td:nth-of-type(1):before {
         content: "Název";
     }
+
     .kategorie td:nth-of-type(2):before {
         content: "Upravit";
     }
+
     .kategorie td:nth-of-type(3):before {
         content: "Smazat";
     }

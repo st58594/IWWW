@@ -1,6 +1,6 @@
 <?php
-if (isset($_GET["err"])){
-    echo "<p>".$_GET["err"]."</p>";
+if (isset($_GET["err"])) {
+    echo "<p>" . $_GET["err"] . "</p>";
 }
 ?>
 
@@ -41,10 +41,10 @@ if (isset($_GET["err"])){
                     <?php
                     foreach (Polozka::getAll($item["id_objednavka"]) as $polozka) {
                         echo "<label>";
-                        echo $polozka["id_produkt"]. " | ";
-                        echo $polozka["nazev"]." | ";
-                        echo number_format($polozka["mnozstvi"],0, '', ' ')." ks | ";
-                        echo number_format($polozka["cena"], 2 ,',', ' ') ." Kč/ks";
+                        echo $polozka["id_produkt"] . " | ";
+                        echo $polozka["nazev"] . " | ";
+                        echo number_format($polozka["mnozstvi"], 0, '', ' ') . " ks | ";
+                        echo number_format($polozka["cena"], 2, ',', ' ') . " Kč/ks";
                         echo "</label>";
                     }
                     ?>

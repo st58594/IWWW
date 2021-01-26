@@ -87,7 +87,7 @@ class Produkt
             $conn = Pripojeni::getPdoInstance();
             $produkt = Produkt::get($id_produkt);
             $mnozstvi = (int)$produkt["mnozstvi"] - (int)$minus;
-            if ($mnozstvi < 0) throw new PDOException("Produkt ".$produkt["nazev"]." neni ".$minus."x na sklade, poslednich ".$produkt["mnozstvi"]. " kusu");
+            if ($mnozstvi < 0) throw new PDOException("Produkt " . $produkt["nazev"] . " neni " . $minus . "x na sklade, poslednich " . $produkt["mnozstvi"] . " kusu");
 
             $stmt = $conn->prepare("UPDATE produkt SET  mnozstvi = :mnozstvi WHERE id_produkt = :id ");
             $stmt->bindParam(":mnozstvi", $mnozstvi, PDO::PARAM_INT);

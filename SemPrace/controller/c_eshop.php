@@ -22,7 +22,7 @@ if (!empty($_GET)) {
     }
 
     if ($_GET["action"] == "delete" && !empty($_GET["id"])) {
-       deleteFromCart($_GET["id"]);
+        deleteFromCart($_GET["id"]);
     }
 }
 
@@ -32,12 +32,12 @@ function addToCart($productId)
     if (!array_key_exists($productId, $_SESSION["cart"]) && $produkt["mnozstvi"] > 0) {
         $_SESSION["cart"][$productId]["amount"] = 1;
     } else {
-        if ($_SESSION["cart"][$productId]["amount"]+1 <= $produkt["mnozstvi"]){
+        if ($_SESSION["cart"][$productId]["amount"] + 1 <= $produkt["mnozstvi"]) {
             $_SESSION["cart"][$productId]["amount"]++;
         }
     }
 
-    if (!empty($_SESSION["cart"]) && $_GET["iu"]){
+    if (!empty($_SESSION["cart"]) && $_GET["iu"]) {
         $_SESSION["id_umelec"] = $_GET["iu"];
     }
 }
@@ -57,13 +57,13 @@ function deleteFromCart($productId)
 {
     unset($_SESSION["cart"][$productId]);
 
-    if (empty($_SESSION["cart"])){
+    if (empty($_SESSION["cart"])) {
         unset($_SESSION["id_umelec"]);
     }
 }
 
-if (isset($_GET["page"])){
+if (isset($_GET["page"])) {
     header("Location:../kosik.php?page=prehled");
-}else{
+} else {
     header("Location:../index.php");
 }

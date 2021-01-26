@@ -52,10 +52,11 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.caption p{
+.caption p {
     text-align: left;
     margin: 0 0 5px 0;
 }
+
 .caption p span {
     background-color: #dddddd;
     padding: 3px 7px;
@@ -67,7 +68,7 @@
 .transparent-box {
     height: 100%;
     width: 100%;
-    background-color:rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     position: absolute;
     top: 0;
     left: 0;
@@ -79,7 +80,7 @@
 }
 
 .img-box:hover .transparent-box {
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .img-box:hover .caption {
@@ -99,9 +100,10 @@
     opacity: 0.5;
 }
 
-.produkt-btn{
+.produkt-btn {
     margin-top: 13px;
 }
+
 .caption a {
     color: #343a40;
     background-color: #dddddd;
@@ -113,17 +115,18 @@
     margin-right: 5px;
 }
 
-.caption a:hover{
+.caption a:hover {
     color: white;
     background-color: #343a40;
     transition: .5s;
 }
 
 @media only screen and (max-width: 1200px) {
-    .main-container{
+    .main-container {
         flex-direction: column;
     }
-    .content-container img{
+
+    .content-container img {
         width: 100%;
         height: auto;
     }

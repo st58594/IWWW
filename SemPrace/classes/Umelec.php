@@ -30,7 +30,7 @@ class Umelec
             $stmt = Pripojeni::getPdoInstance()->prepare('SELECT * FROM umelec WHERE id_umelec = :id');
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
-            if ($stmt->rowCount() < 1)  throw new PDOException("Takovy ucet neexistuje");
+            if ($stmt->rowCount() < 1) throw new PDOException("Takovy ucet neexistuje");
             return $stmt->fetch();
         } catch (PDOException $exception) {
             throw $exception;

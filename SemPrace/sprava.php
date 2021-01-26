@@ -6,11 +6,11 @@ function __autoload($class)
 }
 
 if (!empty($_POST) || !empty($_GET["action"])) {
-    if (isset($_POST["stav"])){
+    if (isset($_POST["stav"])) {
         include "./controller/c_objednavka.php";
-    }elseif(isset($_POST["id_umelec"]) || $_GET["action"] == "unset"){
+    } elseif (isset($_POST["id_umelec"]) || $_GET["action"] == "unset") {
         include "./controller/c_emulator.php";
-    }else{
+    } else {
         include "./controller/c_produkt.php";
     }
 }

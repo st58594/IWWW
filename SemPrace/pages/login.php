@@ -5,7 +5,7 @@ if (isset($_SESSION["Umelec"])) {
     <script>
         window.location.reload();
     </script>
-<?php
+    <?php
 }
 if (!empty($_POST)) {
     try {

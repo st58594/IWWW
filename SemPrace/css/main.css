@@ -1,69 +1,78 @@
-body{
+body {
     margin: 0;
     display: grid;
     /*min-height: 100%;*/
     grid-template-rows: auto 1fr auto;
 
 }
-.fljs{
+
+.fljs {
     display: flex;
     justify-content: space-between;
 }
-.bl{
+
+.bl {
     display: block;
 }
-.main-container{
+
+.main-container {
     display: flex;
     flex-wrap: nowrap;
 }
-.content-container{
+
+.content-container {
     /*background-color: aliceblue;*/
     /*flex: 0 1 70%;*/
     /*flex-grow: 1;*/
 }
-.content-container{
+
+.content-container {
     padding: 5px 15px;
 }
 
-.aside-container{
+.aside-container {
     border-right: 1px solid #343a40;
 }
 
 /*SIDE NAV*/
-.side-nav, .filtry-container{
+.side-nav, .filtry-container {
     display: grid;
     padding: 15px;
 }
-.side-nav a, .filtr{
+
+.side-nav a, .filtr {
     color: black;
     background-color: #dddddd;
     margin-bottom: 5px;
 }
 
-.side-nav a:hover , .filtr:hover{
+.side-nav a:hover, .filtr:hover {
     background-color: #343a40;
     color: white;
     transition: .5s;
 }
 
-.filtr{
+.filtr {
     box-sizing: border-box;
     display: block;
     white-space: nowrap;
     margin: 0;
 }
-.filtr input{
-    margin-right:7px;
+
+.filtr input {
+    margin-right: 7px;
     margin-left: 0;
 }
+
 .filtry-container form {
     margin: 0;
 }
+
 .filtry-container h3, .filtry-container p {
     margin: 5px 0;
 }
 
-nav a, .filtr{
+nav a, .filtr {
     padding: 5px 15px;
     text-decoration: none;
     font-size: 1em;
@@ -89,8 +98,8 @@ nav a, .filtr{
 
 .caret-down::before {
     -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari */'
-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);
 }
 
 .nested {
@@ -102,23 +111,23 @@ transform: rotate(90deg);
 }
 
 
-.submit{
+.submit {
     text-align: center;
     text-decoration: none;
     border: none;
-    background-color: #343a40 !important; ;
+    background-color: #343a40 !important;;
     padding: 6px 15px !important;
     margin: 0;
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     letter-spacing: 1px;
     cursor: pointer;
 }
 
-.submit:hover{
+.submit:hover {
     color: white;
 }
 
-.thumb{
+.thumb {
     width: auto;
     height: 100px;
 

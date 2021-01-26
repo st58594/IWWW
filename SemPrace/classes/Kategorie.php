@@ -10,7 +10,8 @@ class Kategorie
         return $stmt->fetchAll();
     }
 
-    static function get($id_produkt, $id_kategorie) :bool{
+    static function get($id_produkt, $id_kategorie): bool
+    {
         $stmt = Pripojeni::getPdoInstance()->prepare("SELECT * from produkt_kategorie where id_produkt = :id_produkt AND id_kategorie = :id_kategorie");
         $stmt->bindParam(":id_produkt", $id_produkt, PDO::PARAM_INT);
         $stmt->bindParam(":id_kategorie", $id_kategorie, PDO::PARAM_INT);
@@ -41,7 +42,8 @@ class Kategorie
         }
     }
 
-    static function delete($id){
+    static function delete($id)
+    {
         try {
             $stmt = Pripojeni::getPdoInstance()->prepare("DELETE FROM kategorie where id_kategorie = :id");
             $stmt->bindParam(":id", $id, PDO::PARAM_INT);

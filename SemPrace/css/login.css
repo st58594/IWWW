@@ -1,47 +1,52 @@
-.login-wrapper{
+.login-wrapper {
     margin: 0 auto;
     width: auto;
     padding: 10px;
 
 }
+
 .login-wrapper div {
     display: flex;
     justify-content: space-between;
     padding: 5px;
 }
 
-.submit{
+.submit {
     width: 100%;
 }
 
-.sec-href{
+.sec-href {
     justify-content: center !important;
 
 }
-.sec-href a{
+
+.sec-href a {
     letter-spacing: 1px;
     text-decoration: none;
     color: black;
 }
-.sec-href a:hover{
+
+.sec-href a:hover {
     color: #3e6388;
 }
 
-.submit, .sec-href{
+.submit, .sec-href {
     text-transform: uppercase;
 }
 
-.submit:hover{
+.submit:hover {
     color: white;
 }
 
-.registration-form{
+.registration-form {
     margin-bottom: 0;
 }
-.label{
+
+.label {
     padding: 5px;
 }
-.login-form input, .registration-form input{
+
+.login-form input, .registration-form input {
     background-color: transparent;
     padding: 5px;
     border: none;

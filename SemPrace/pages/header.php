@@ -20,15 +20,11 @@
             }
             echo " <span class='umelec'>" . $_SESSION["Umelec"]["jmeno"] . " " . $_SESSION["Umelec"]["prijmeni"] . "</span></a>";
 
-            if (isset($_SESSION["emulator"]) && !empty($_SESSION["emulator"])){
+            if (isset($_SESSION["emulator"]) && !empty($_SESSION["emulator"])) {
                 echo "<a href='./sprava.php?action=unset'><i class='fa fa-eye-slash' aria-hidden='true'></i></a>";
             }
-
             echo "<a href='./index.php?page=login'><i class='fa fa-sign-out' aria-hidden='true'></i></a>";
-
-
         }
-
         ?>
         <a href="./kosik.php?page=prehled"><i class="fa fa-shopping-basket"></i></a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">

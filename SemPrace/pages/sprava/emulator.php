@@ -20,21 +20,23 @@
             <form class="table-view" method="post" action="./sprava.php">
                 <input type="hidden" name="id_umelec" value="<?php echo $item["id_umelec"]; ?>">
                 <td>
-                    <label><?php echo $item["login"];?></label>
+                    <label><?php echo $item["login"]; ?></label>
                 </td>
                 <td>
-                    <label><?php echo $item["jmeno"];?></label>
+                    <label><?php echo $item["jmeno"]; ?></label>
                 </td>
                 <td>
-                    <label><?php echo $item["prijmeni"];?></label>
+                    <label><?php echo $item["prijmeni"]; ?></label>
                 </td>
                 <td>
-                    <label><?php echo $item["email"];?></label>
+                    <label><?php echo $item["email"]; ?></label>
                 </td>
                 <td>
                     <select name="opravneni" onchange="this.form.submit()">
-                        <option value="ADMIN" <?php if ($item["opravneni"] == 'ADMIN') echo "selected";?>>Admin</option>
-                        <option value="UMELEC" <?php if ($item["opravneni"] == 'UMELEC') echo "selected";?>>Umělec</option>
+                        <option value="ADMIN" <?php if ($item["opravneni"] == 'ADMIN') echo "selected"; ?>>Admin
+                        </option>
+                        <option value="UMELEC" <?php if ($item["opravneni"] == 'UMELEC') echo "selected"; ?>>Umělec
+                        </option>
                     </select>
                 </td>
                 <td>

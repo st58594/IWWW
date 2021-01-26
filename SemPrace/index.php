@@ -24,42 +24,18 @@ function __autoload($class)
 include "pages/header.php";
 ?>
 <section class="main-container">
-<!--    <aside class="side-nav">-->
-<!--        <nav>-->
-<!--            <h2>Předměty</h2>-->
-<!--            --><?php
-//            include "pages/navigacePredmet.php";
-//            ?>
-<!--        </nav>-->
-<!--    </aside>-->
-<!--    <section class="content-container">-->
-        <?php
-        if (!empty($_GET["page"])) {
-            $path = "./pages/" . $_GET["page"] . ".php";
-            if (file_exists($path)) {
-                include $path;
-            } else {
-                echo "not page";
-            }
-        }else{
-            include "./pages/eshop.php";
+    <?php
+    if (!empty($_GET["page"])) {
+        $path = "./pages/" . $_GET["page"] . ".php";
+        if (file_exists($path)) {
+            include $path;
+        } else {
+            echo "not page";
         }
-        ?>
-<!---->
-<!--    </section>-->
-</section>
-
-
-<script>
-    var toggler = document.getElementsByClassName("caret");
-    var i;
-
-    for (i = 0; i < toggler.length; i++) {
-        toggler[i].addEventListener("click", function () {
-            this.parentElement.querySelector(".nested").classList.toggle("active");
-            this.classList.toggle("caret-down");
-        });
+    } else {
+        include "./pages/eshop.php";
     }
-</script>
+    ?>
+</section>
 </body>
 </html>

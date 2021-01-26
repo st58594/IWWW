@@ -1,12 +1,12 @@
 <?php
-if (isset($_GET["action"])){
-    if ($_GET["action"] == "zakoupeno"){
+if (isset($_GET["action"])) {
+    if ($_GET["action"] == "zakoupeno") {
         echo "<p>Objednáno</p>";
     }
 }
 
-if (isset($_GET["err"])){
-    echo "<p>".$_GET["err"]."</p>";
+if (isset($_GET["err"])) {
+    echo "<p>" . $_GET["err"] . "</p>";
 
 }
 
@@ -24,7 +24,7 @@ if (!empty($_SESSION["cart"])) {
         echo "</div><div class='right'>";
         echo "<div class='product-price'>" . $item["cena"] * $value["amount"] . " Kč</div>";
         echo "<section class='mnozstvi'>";
-        echo "<div class='product-amount'>".$value["amount"]." ks</div>";
+        echo "<div class='product-amount'>" . $value["amount"] . " ks</div>";
         echo "<div>";
         echo "<div class='product-btn'><a href='./controller/c_eshop.php?page=prehled&action=add&id=" . $item["id_produkt"] . "'><i class='fa fa-plus-square'></i></a></div>";
         echo "<div class='product-btn'><a href='./controller/c_eshop.php?page=prehled&action=remove&id=" . $item["id_produkt"] . "'><i class='fa fa-minus-square'></i></a></div>";
@@ -36,7 +36,7 @@ if (!empty($_SESSION["cart"])) {
     $_SESSION["celkova_cena"] = $totalPrice;
     echo "<div class='product-wrapper continue'>";
     echo "<div>";
-    echo "<div>Celkem: <strong>".number_format($totalPrice, 2, ',', ' ')." Kč</strong></div>";
+    echo "<div>Celkem: <strong>" . number_format($totalPrice, 2, ',', ' ') . " Kč</strong></div>";
     echo "</div><div>";
     echo "<div id='finish-order' class='product-btn'><a href='./kosik.php?page=dodaci_udaje'><i class='fa fa-user'></i> Pokračovat</a></div>";
     echo "</div></div>";
@@ -47,14 +47,14 @@ if (!empty($_SESSION["cart"])) {
 
 
 <script>
-     function change(oldVal) {
-         var value = document.getElementById("cena").value;
-         var session = sessionStorage.getItem("cart");
-            if (value < oldVal) {
-                alert(session.)
+    function change(oldVal) {
+        var value = document.getElementById("cena").value;
+        var session = sessionStorage.getItem("cart");
+        if (value < oldVal) {
+            alert(session.)
 
-            } else {
-                alert(sessionStorage.getItem("cart"))
-            }
+        } else {
+            alert(sessionStorage.getItem("cart"))
         }
+    }
 </script>

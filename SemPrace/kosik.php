@@ -5,16 +5,16 @@ function __autoload($class)
     require_once './classes/' . $class . '.php';
 }
 
-if (!empty($_POST["dokoncit"])){
-    if (isset($_POST["dokoncit"]) && isset($_SESSION["cart"]) && isset($_SESSION["celkova_cena"]) && $_SESSION["id_umelec"]){
+if (!empty($_POST["dokoncit"])) {
+    if (isset($_POST["dokoncit"]) && isset($_SESSION["cart"]) && isset($_SESSION["celkova_cena"]) && $_SESSION["id_umelec"]) {
         try {
-            Objednavka::insert($_SESSION["cart"], $_POST["email"], $_POST["jmeno"], $_POST["prijmeni"], $_POST["adresa"], $_POST["mobil"] , $_SESSION["celkova_cena"], $_SESSION["id_umelec"]);
+            Objednavka::insert($_SESSION["cart"], $_POST["email"], $_POST["jmeno"], $_POST["prijmeni"], $_POST["adresa"], $_POST["mobil"], $_SESSION["celkova_cena"], $_SESSION["id_umelec"]);
             unset($_SESSION["id_umelec"]);
             unset($_SESSION["celkova_cena"]);
             unset($_SESSION["cart"]);
             header("Location:./kosik.php?page=prehled&action=zakoupeno");
-        }catch (PDOException $exception){
-            header("Location:./kosik.php?page=prehled&err=".$exception->getMessage());
+        } catch (PDOException $exception) {
+            header("Location:./kosik.php?page=prehled&err=" . $exception->getMessage());
         }
     }
 }
