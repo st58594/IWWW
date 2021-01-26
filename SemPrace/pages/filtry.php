@@ -14,7 +14,7 @@ try {
     echo "<p>".$produkt["nazev"]."</p>";
     foreach (Kategorie::getAll() as $item) {
         ?>
-        <form name="updateKategorie" method="post" action="./sprava.php?page=produkty>">
+        <form method="post" action="./sprava.php?page=produkty>">
             <?php
             echo "<input type='hidden' name='id_kategorie' value='".$item["id_kategorie"]."'>";
             echo "<input type='hidden' name='id_produkt' value='".$_GET["id"]."'>";

@@ -3,6 +3,13 @@
 
 class Produkt_Kategorie
 {
+    static function get($id_produkt){
+        $stmt = Pripojeni::getPdoInstance()->prepare("SELECT * FROM produkt_kategorie pk JOIN kategorie k on pk.id_kategorie = k.id_kategorie where pk.id_produkt = :id_produkt");
+        $stmt->bindParam(":id_produkt", $id_produkt, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     static function insert($id_kategorie, $id_produkt)
     {
         try {

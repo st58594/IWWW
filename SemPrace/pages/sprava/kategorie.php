@@ -20,7 +20,7 @@ if (isset($_GET["action"]) && isset($_GET["id"])) {
 }
 ?>
 <h3>Kategorie</h3>
-<table>
+<table class="kategorie">
     <thead>
     <tr>
         <th>kategorie</th>
