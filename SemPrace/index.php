@@ -5,14 +5,13 @@ function __autoload($class)
     require_once './classes/' . $class . '.php';
 }
 
-if (isset($_SESSION["userID"])){
-}
 ?>
 
 <html lang="cz">
 <head>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/eshop.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/profile.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.css">
@@ -42,6 +41,8 @@ include "pages/header.php";
             } else {
                 echo "not page";
             }
+        }else{
+            include "./pages/eshop.php";
         }
         ?>
 <!---->

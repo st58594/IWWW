@@ -9,42 +9,7 @@ body {
     /*flex-grow: 1;*/
 }
 
-.aside-container{
-    border-right: 1px solid #343a40;
-}
 
-/*SIDE NAV*/
-.side-nav, .filtry-container{
-    display: grid;
-    padding: 15px;
-}
-.side-nav a, .filtr{
-    color: black;
-    background-color: #dddddd;
-    margin-bottom: 5px;
-}
-
-.side-nav a:hover , .filtr:hover{
-    background-color: #343a40;
-    color: white;
-    transition: .5s;
-}
-
-.filtr{
-    box-sizing: border-box;
-    display: block;
-    margin: 0;
-}
-.filtr input{
-    margin-right:7px;
-    margin-left: 0;
-}
-.filtry-container form {
-    margin: 0;
-}
-.filtry-container h3, .filtry-container p {
-    margin: 5px 0;
-}
 
 /*TABLE*/
 form {
@@ -60,6 +25,10 @@ form div {
 label {
     margin: 5px;
 }
+.objednavka td label{
+    text-align: left;
+    display: block;
+}
 
 .submit, select, input {
     width: 100%;
@@ -69,7 +38,9 @@ label {
 table {
     border-collapse: collapse;
 }
-
+th{
+    padding: 5px;
+}
 td, th {
     border: 1px solid #343a40;
     text-align: center;
@@ -102,6 +73,10 @@ td input, td select, .submit-row {
     padding: 10px;
 }
 
+.objednavka td input, .objednavka td select{
+    padding: 0 !important;
+}
+
 .submit-row, .submit-row a {
     text-decoration: none;
     color: black;
@@ -117,12 +92,145 @@ td input, td select, .submit-row {
     margin: 0;
     padding: 10px;
 }
-.thumb{
-        width: auto;
-    height: 100px;
-
-}
 
 input[type='checkbox']{
     width: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .main-container{
+        flex-direction: column;
+    }
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+    PRODUKTY
+    */
+    .produkty td:nth-of-type(1):before {
+        content: "Název";
+    }
+
+    .produkty td:nth-of-type(2):before {
+        content: "Cena";
+    }
+
+    .produkty td:nth-of-type(3):before {
+        content: "Množství";
+    }
+
+    .produkty td:nth-of-type(4):before {
+        content: "Popis";
+    }
+
+    .produkty td:nth-of-type(5):before {
+        content: "Náhled";
+    }
+
+    .produkty td:nth-of-type(6):before {
+        content: "Kategorie";
+    }
+
+    .produkty td:nth-of-type(7):before {
+        content: "Upravit";
+    }
+
+    .produkty td:nth-of-type(8):before {
+        content: "Smazat";
+    }
+
+    /*OBJEDNAVKA*/
+    .objednavka td:nth-of-type(1):before {
+        content: "Datum Objednání";
+    }
+
+    .objednavka td:nth-of-type(2):before {
+        content: "Doprava a platba";
+    }
+
+    .objednavka td:nth-of-type(3):before {
+        content: "Zákazník";
+    }
+
+    .objednavka td:nth-of-type(4):before {
+        content: "Položky";
+    }
+
+    .objednavka td:nth-of-type(5):before {
+        content: "Stav";
+    }
+
+    /*EMULATOR*/
+    .emulator td:nth-of-type(1):before {
+        content: "Login";
+    }
+
+    .emulator td:nth-of-type(2):before {
+        content: "Jméno";
+    }
+
+    .emulator td:nth-of-type(3):before {
+        content: "Přijmení";
+    }
+
+    .emulator td:nth-of-type(4):before {
+        content: "Email";
+    }
+
+    .emulator td:nth-of-type(5):before {
+        content: "Oprávění";
+    }
+
+    .emulator td:nth-of-type(6):before {
+        content: "Emulovat";
+    }
+
+    /*KATEGORIE*/
+    .kategorie td:nth-of-type(1):before {
+        content: "Název";
+    }
+    .kategorie td:nth-of-type(2):before {
+        content: "Upravit";
+    }
+    .kategorie td:nth-of-type(3):before {
+        content: "Smazat";
+    }
 }
