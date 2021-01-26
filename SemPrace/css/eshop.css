@@ -1,0 +1,130 @@
+/*.content-container{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: center;*/
+
+/*}*/
+/*.img-box{*/
+/*    position: relative;*/
+/*    display: block;*/
+/*    height: 250px;*/
+/*    text-align: center;*/
+/*    background-color: #DDDDDD;*/
+/*    flex-grow: 2;*/
+/*    margin: 2px;*/
+/*    overflow: hidden;*/
+/*}*/
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+}
+
+.content-container img {
+    height: 250px;
+    /*width: 350px;*/
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+.img-box {
+    text-align: center;
+    margin: 2px;
+    flex-grow: 2;
+    /*background-color: #dddddd;*/
+    box-sizing: content-box;
+    /*margin: 10px;*/
+    /*height: 250px;*/
+    /*width: 350px;*/
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    /*background-color: white;*/
+}
+
+.caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.caption p{
+    text-align: left;
+    margin: 0 0 5px 0;
+}
+.caption p span {
+    background-color: #dddddd;
+    padding: 3px 7px;
+    margin-right: 5px;
+    border-radius: 20%;
+    color: black;
+}
+
+.transparent-box {
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.img-box:hover img {
+    transform: scale(1.8);
+}
+
+.img-box:hover .transparent-box {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+}
+
+.img-box:hover {
+    cursor: pointer;
+}
+
+.caption > p:nth-child(2), p:nth-child(3) {
+    font-size: 0.9em;
+}
+
+.opacity-low {
+    opacity: 0.5;
+}
+
+.produkt-btn{
+    margin-top: 13px;
+}
+.caption a {
+    color: #343a40;
+    background-color: #dddddd;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 5px;
+}
+
+.caption a:hover{
+    color: white;
+    background-color: #343a40;
+    transition: .5s;
+}
+
+@media only screen and (max-width: 1200px) {
+    .main-container{
+        flex-direction: column;
+    }
+    .content-container img{
+        width: 100%;
+        height: auto;
+    }
+}
