@@ -16,12 +16,21 @@ class Umelec
             throw $exception;
         }
     }
+
+    static function getAll()
+    {
+        $stmt = Pripojeni::getPdoInstance()->prepare('SELECT * FROM umelec');
+        $stmt->execute();
+        return $stmt->fetchALL();
+    }
+
     static function getUmelec($id)
     {
         try {
             $stmt = Pripojeni::getPdoInstance()->prepare('SELECT * FROM umelec WHERE id_umelec = :id');
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
+            if ($stmt->rowCount() < 1)  throw new PDOException("Takovy ucet neexistuje");
             return $stmt->fetch();
         } catch (PDOException $exception) {
             throw $exception;
@@ -44,7 +53,8 @@ class Umelec
         }
     }
 
-    static function update($id, $jmeno, $prijmeni, $email, $login, $mobil){
+    static function update($id, $jmeno, $prijmeni, $email, $login, $mobil)
+    {
         try {
             $stmt = Pripojeni::getPdoInstance()->prepare('UPDATE umelec SET jmeno = :jmeno, prijmeni = :prijmeni, email = :email, login = :login, mobil = :mobil where id_umelec = :id');
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -54,21 +64,35 @@ class Umelec
             $stmt->bindParam(':login', $login);
             $stmt->bindParam(':mobil', $mobil);
             $stmt->execute();
-        }catch (PDOException $exception){
+        } catch (PDOException $exception) {
             throw $exception;
         }
     }
 
-    static function updateHeslo($id, $heslo){
+    static function updateHeslo($id, $heslo)
+    {
         try {
             $stmt = Pripojeni::getPdoInstance()->prepare('UPDATE umelec SET  heslo = MD5(:heslo) where id_umelec = :id');
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->bindParam(':heslo', $heslo);
             $stmt->execute();
-        }catch (PDOException $exception){
+        } catch (PDOException $exception) {
             throw $exception;
         }
     }
+
+    static function updateOpravneni($id, $opraveni)
+    {
+        try {
+            $stmt = Pripojeni::getPdoInstance()->prepare('UPDATE umelec SET  opravneni = :opravneni where id_umelec = :id');
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->bindParam(':opravneni', $opraveni);
+            $stmt->execute();
+        } catch (PDOException $exception) {
+            throw $exception;
+        }
+    }
+
     static function getAvatar($id)
     {
         try {
@@ -83,7 +107,7 @@ class Umelec
 
     static function updateAvatar($id, $avatar)
     {
-        try{
+        try {
             $conn = Pripojeni::getPdoInstance();
             $stmt = $conn->prepare("UPDATE umelec SET avatar = :avatar WHERE id_umelec = :id ");
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -92,7 +116,7 @@ class Umelec
             $stmt->execute();
             fclose($avatar);
             $conn->commit();
-        }catch (PDOException $exception){
+        } catch (PDOException $exception) {
             throw $exception;
         }
 
